@@ -1,0 +1,206 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: relative; /* Necesario para que position: absolute funcione */
+  overflow: hidden; /* Evita scrollbars por las capas más grandes */
+  background: linear-gradient(45deg, #02182b 0%, #001323 100%);
+}
+
+.hero_container {
+  z-index: 1111;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 8rem;
+  width: 80%;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.hero_container h3 {
+  position: relative;
+  top: -20px;
+  color: #e1b12c;
+  font-size: 1.3rem;
+  transform: rotate(-5deg);
+  letter-spacing: 0.5px;
+}
+
+.hero_container h1 {
+  margin-top: 3rem;
+  font-size: 3rem;
+  color: #08415c;
+}
+
+.hero_container span {
+  color: #f5f5f5;
+}
+
+/* Las capas deben posicionarse absolutamente para superponerse */
+.backgroundLayer,
+.mainLayer,
+.frontLayer {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none; /* Para que los clics pasen a través */
+  border-radius: 50%;
+}
+
+.backgroundLayer {
+  z-index: 1;
+  position: absolute;
+  top: 15%;
+}
+
+/* Permitir clics en elementos interactivos */
+.mainLayer a,
+.mainLayer button {
+  pointer-events: auto;
+}
+
+.mainLayer {
+  z-index: 2;
+  position: absolute;
+  top: 15%;
+}
+
+.frontLayer {
+  z-index: 3;
+  position: absolute;
+}
+.profile {
+  max-width: 50%;
+}
+
+.links_spa {
+  position: relative;
+  right: -30px;
+  top: 50px;
+  font-size: 1rem;
+  height: 100%;
+  align-self: center;
+  align-content: center;
+  text-transform: uppercase;
+}
+
+.links_spa li {
+  list-style-type: none;
+  margin-bottom: 2rem;
+  border-radius: 2rem;
+  padding: 0.5rem 0.6rem;
+  text-align: center;
+  background-color: #e1b12c;
+  box-shadow: 0 0 10px 5px #08415c74;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.links_spa li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 2px 10px 1px #f5f5f5af;
+  color: #f5f5f5;
+}
+
+.links_spa a {
+  text-decoration: none;
+  color: #02182b;
+  font-weight: bold;
+}
+
+.links_external {
+  width: 63%;
+  font-size: 1.5rem;
+  z-index: 1111;
+}
+
+.links_external a {
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 2rem;
+  padding: 1rem 1.5rem;
+  border: 2px solid #08415c;
+  background-color: #041625c8;
+  color: #f5f5f5;
+  border-radius: 2rem;
+  font-weight: 600;
+  transition: transform 0.4s ease-in-out, background-color 0.3s ease-in-out;
+  transform: scale(1);
+}
+
+.links_external a:hover {
+  transform: scale(0.95);
+  border: 2px solid #08415c;
+  background-color: #e1b12c;
+  color: #02182b;
+}
+
+@media screen and (min-width: 326px) and (max-width: 1058px) and (max-height: 850px) {
+  .hero_container h1 {
+    font-size: 2rem;
+  }
+
+  .hero_container h3 {
+    position: relative;
+    top: 0;
+  }
+
+  .profile {
+    min-width: 100%;
+  }
+
+  .links_spa {
+    position: absolute;
+    bottom: -82%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px);
+    padding: 10px 30px;
+    border-radius: 50px;
+    z-index: 1000;
+    width: max-content;
+    box-shadow: 0 4px 15px rgba(2, 24, 43, 0.5);
+    height: auto;
+  }
+
+  .links_spa ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  .links_spa li {
+    display: inline-block;
+    margin-bottom: 0;
+    transform: scale(1);
+  }
+
+  .links_spa li:hover {
+    transform: scale(0.9);
+    box-shadow: none;
+  }
+
+  .links_external {
+    width: 80%;
+    font-size: 1.2rem;
+  }
+}
