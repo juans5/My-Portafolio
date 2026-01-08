@@ -1,5 +1,5 @@
 import styles from "../../Styles/Hero.module.css";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 import { LinksSpa } from "./components/LinksSpa";
 import { Profile } from "./components/Profile";
@@ -9,11 +9,13 @@ import { useMouseParallax } from "../../Hooks/useMouseParallax";
 import { ParallaxLayer } from "../../Components/ParallaxLayer";
 import { GradientSphere } from "./components/GradientSphere";
 import { BackgroundPattern } from "./components/BackgroundPattern";
+import { AnimateIn } from "../../Components/AnimateIn";
+import { NAV_LINKS } from "../../Config/navigation";
 
 export const HeroSection = () => {
   // Llamar hook para los motionValues
   const { x, y } = useMouseParallax({
-    stiffness: 200, // como de rapido sigue el mouse
+    stiffness: 100, // como de rapido sigue el mouse
     damping: 50, // rebote que tiene
   });
 
@@ -22,12 +24,20 @@ export const HeroSection = () => {
     { href: "/cv/myCV.pdf", label: "CV" },
   ];
 
+  const [{ href }] = NAV_LINKS; // primer href del array
+
   return (
-    <motion.div
+    // <motion.div
+    //   className={styles.container}
+    //   initial={{ opacity: 0, y: 50 }}
+    //   animate={{ opacity: 1, y: 0 }}
+    //   transition={{ duration: 0.5, delay: 0.2 }}
+    //   style={{ position: "relative", overflow: "hidden" }}
+    // >
+
+    <section
+      id={href}
       className={styles.container}
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.2 }}
       style={{ position: "relative", overflow: "hidden" }}
     >
       {/* Capa de Fondo, se mueve poco y en direccion opuesta (strength negativo) */}
@@ -45,11 +55,15 @@ export const HeroSection = () => {
       </ParallaxLayer>
 
       {/* Contenido principal del hero */}
+
       <div className={styles.hero_container}>
-        <Profile />
+        <AnimateIn>
+          <Profile links={EXTERNAL_LINKS} />
+        </AnimateIn>
         <LinksSpa />
       </div>
-      <ExternalLinks links={EXTERNAL_LINKS} />
-    </motion.div>
+
+      {/* <ExternalLinks links={EXTERNAL_LINKS} /> */}
+    </section>
   );
 };
