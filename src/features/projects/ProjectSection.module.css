@@ -60,7 +60,8 @@
 .card_container p {
   text-align: left;
   font-size: 1.1rem;
-  margin: 10px 0;
+  font-family: "Roboto";
+  color: #bfc2c7;
 }
 
 .card_container img {
@@ -80,7 +81,9 @@
   font-weight: bold;
   width: 100%;
   /* transition: all 0.2s ease-out; */
-  transition: background-color 0.2s ease-out, transform 0.1s;
+  transition:
+    background-color 0.2s ease-out,
+    transform 0.1s;
 }
 
 .card_container button:active,
@@ -98,13 +101,13 @@
   height: 100%;
   width: 100%;
   max-height: 100%;
-  padding: 2rem;
+  padding: 2.2rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: 1.2rem;
+  gap: 1.6rem;
 }
 
 .card div {
@@ -167,11 +170,13 @@
   transform: translateY(-10px);
 }
 .card_dropup svg {
-  color: #06467e;
+  color: #0a77d6;
+  /* color: #bfc2c7; */
   border-radius: 1rem;
   width: 3rem;
   height: 3rem;
 }
+
 .btn_container {
   display: flex;
   gap: 10px;
@@ -210,5 +215,13 @@
     border-radius: 0.5rem;
     width: 2.7rem;
     height: 2.7rem;
+  }
+
+  .card_container p {
+    font-size: 0.9rem;
+  }
+
+  .card_container h3 {
+    font-size: 2rem;
   }
 }

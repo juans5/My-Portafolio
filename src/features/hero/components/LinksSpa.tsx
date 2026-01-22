@@ -59,7 +59,7 @@ export const LinksSpa = ({ links = NAV_LINKS }: LinkSpaProp) => {
                 aria-label={link.label}
                 onClick={(e) => handleNav(e, link.href)}
                 style={{
-                  color: isInView ? "#02182b" : "#f5f5f5",
+                  color: "#02182b",
                 }}
               >
                 {link.label}

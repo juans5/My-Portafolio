@@ -27,16 +27,22 @@
   font-size: 1.3rem;
   transform: rotate(-5deg);
   letter-spacing: 0.5px;
+  font-family: "Roboto";
 }
 
 .hero_container h1 {
   margin-top: 3rem;
   font-size: 3rem;
-  color: #08415c;
+  /* color: #08415c; */
+  color: #bfc2c7;
+  font-family: "Roboto";
+  line-height: 1.5;
 }
 
 .hero_container span {
   color: #f5f5f5;
+  font-family: "Roboto";
+  line-height: 1.5;
 }
 
 /* Las capas deben posicionarse absolutamente para superponerse */
@@ -78,14 +84,14 @@
   position: absolute;
 }
 .profile {
-  max-width: 80%;
+  max-width: 90%;
 }
 
 .sentinel_ref {
   position: relative;
   height: 100%;
   top: 50px;
-  right: -50px;
+  right: 0;
 }
 
 .links_spa {
@@ -141,7 +147,7 @@
   height: auto;
 
   /* Visuals (Glassmorphism) */
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: #57575780;
   backdrop-filter: blur(20px);
   padding: 10px 20px;
   border-radius: 2rem;
@@ -176,7 +182,9 @@
   color: #f5f5f5;
   border-radius: 2rem;
   font-weight: 600;
-  transition: transform 0.4s ease-in-out, background-color 0.3s ease-in-out;
+  transition:
+    transform 0.4s ease-in-out,
+    background-color 0.3s ease-in-out;
   transform: scale(1);
 }
 
@@ -297,7 +305,8 @@
   }
 
   .links_spa a {
-    padding: 0.5rem;
+    padding: 0.7rem;
+    font-size: 0.9rem;
   }
 
   .links_spa li {
