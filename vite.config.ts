@@ -12,4 +12,16 @@ export default defineConfig({
       "@/shared": path.resolve(__dirname, "./src/shared"),
     },
   },
+  build: {
+    minify: "terser",
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          "react-vendor": ["react", "react-dom"],
+          "framer-motion": ["framer-motion"],
+        },
+      },
+    },
+  },
 });
