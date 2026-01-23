@@ -191,9 +191,42 @@
   cursor: pointer;
 }
 
-@media (width <= 748px) {
+@media (width <= 450px) {
   .card_container {
     min-width: 100%;
+  }
+
+  .carousel {
+    padding: 20px;
+  }
+
+  .card button {
+    width: 65%;
+    font-size: 0.9rem;
+  }
+
+  .card a {
+    width: 35%;
+  }
+}
+
+@media (width <= 748px) and (width > 450px) {
+  .card_container {
+    min-width: 100%;
+  }
+
+  .card {
+    padding: 1.8rem;
+    gap: 1.2rem;
+  }
+
+  .card button {
+    width: 65%;
+    font-size: 0.9rem;
+  }
+
+  .card a {
+    width: 35%;
   }
 
   .card_dropup ul {
@@ -211,6 +244,7 @@
   .card_container {
     min-width: 48%;
   }
+
   .card_dropup svg {
     border-radius: 0.5rem;
     width: 2.7rem;

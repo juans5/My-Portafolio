@@ -35,7 +35,7 @@ export const AboutDescription = ({ className }: { className: string }) => {
       whileInView="visible"
       viewport={{ amount: 0.5 }}
     >
-      <h2> FullStack Developer | UI/UX Apassionate | Desire for Learning </h2>
+      <h2> FullStack Developer | UI/UX Appassionate | Desire for Learning </h2>
 
       {paragraph.split(" ").map((char, index) => (
         <motion.span

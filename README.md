@@ -172,7 +172,7 @@ Contributions are welcome. Please:
 
 ## 📬 Contact
 
-**Juan Simón** - [@juan-simon](https://www.linkedin.com/in/juan-simon-developer/)
+**Juan Simón** - [@LinkedIn](https://www.linkedin.com/in/juan-simon-developer/)
 
 Email: juansimontellezduran@gmail.com
 

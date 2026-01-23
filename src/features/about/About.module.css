@@ -68,45 +68,57 @@
 
 /* MEDIA QUERIES */
 
-@media (width <= 748px) {
-  .svg_background {
-    /* Mobile: height-based might be safer, or just allow auto scaling */
-    width: 100%; /* Zoomed in on mobile as requested previously */
-    height: auto;
-    min-width: 800px;
-  }
-
-  .description_container {
-    font-size: 0.9rem;
-  }
-
-  .description_container h2 {
-    margin-bottom: 2rem;
-    font-size: 1.2rem;
-    word-spacing: 0.6rem;
-  }
-
-  .content_wrapper {
-    gap: 3rem;
-  }
-}
-
 @media (width > 748px) and (width <= 1058px) {
   .content_wrapper {
     gap: 5rem;
   }
 
+  .svg_title {
+    width: auto;
+    padding: 2rem;
+  }
+
   .svg_background {
-    width: 100%;
+    width: 120%;
     min-width: 900px;
     height: auto;
   }
   .description_container {
     font-size: 1.2rem;
+    line-height: 1.4;
   }
 
   .description_container h2 {
     font-size: 2rem;
     word-spacing: 0.8rem;
+  }
+}
+
+@media (width <= 748px) {
+  .svg_background {
+    /* Mobile: height-based might be safer, or just allow auto scaling */
+    width: 140%; /* Zoomed in on mobile as requested previously */
+    height: auto;
+    min-width: 800px;
+  }
+
+  .svg_title {
+    width: auto;
+    padding: 1.5rem;
+  }
+
+  .description_container {
+    font-size: 0.7rem;
+    line-height: 1.8;
+  }
+
+  .description_container h2 {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    word-spacing: 0.5rem;
+  }
+
+  .content_wrapper {
+    gap: 3rem;
   }
 }
