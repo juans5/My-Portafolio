@@ -180,7 +180,7 @@
   border-radius: 2rem;
   font-weight: 600;
   transition:
-    transform 0.4s ease-in-out,
+    transform 0.25s ease-in-out,
     background-color 0.3s ease-in-out;
   transform: scale(1);
 }
@@ -190,6 +190,10 @@
   border: 2px solid #08415c;
   background-color: #e1b12c;
   color: #02182b;
+}
+
+.links_external a:active {
+  transform: scale(0.9);
 }
 
 @media (width > 748px) and (width <= 1058px) {
@@ -311,8 +315,10 @@
   }
 
   .links_spa a {
-    padding: 0.2rem;
+    display: inline-block;
+    padding: 0.4rem 0.2rem;
     font-size: 0.6rem;
+    line-height: 1;
   }
 
   .links_spa li {

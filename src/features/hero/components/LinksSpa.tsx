@@ -1,7 +1,7 @@
 import styles from "../Hero.module.css";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { NAV_LINKS } from "@/shared/constants/index";
+import { hooks, constants } from "@/shared";
 
 interface LinkSpa {
   href: string;
@@ -12,10 +12,13 @@ interface LinkSpaProp {
   links?: LinkSpa[];
 }
 
-export const LinksSpa = ({ links = NAV_LINKS }: LinkSpaProp) => {
+export const LinksSpa = ({ links = constants.NAV_LINKS }: LinkSpaProp) => {
   // 1. Usamos un ref para un elemento "centinela" que se queda quieto en el DOM.
   const sentinelRef = useRef(null);
+  const isMobile = hooks.useMediaQuery("(max-width: 1058px)");
   const isInView = useInView(sentinelRef);
+
+  const shouldFloat = !isInView || isMobile;
 
   const handleNav = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
@@ -28,11 +31,11 @@ export const LinksSpa = ({ links = NAV_LINKS }: LinkSpaProp) => {
   return (
     <div ref={sentinelRef} className={styles.sentinel_ref}>
       <motion.nav
-        className={`${styles.links_spa} ${!isInView ? styles.floating_spa : ""}`}
+        className={`${styles.links_spa} ${shouldFloat ? styles.floating_spa : ""}`}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         style={{
-          flexDirection: isInView ? "column" : "row",
+          flexDirection: !shouldFloat ? "column" : "row",
         }}
         layout
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
@@ -40,7 +43,7 @@ export const LinksSpa = ({ links = NAV_LINKS }: LinkSpaProp) => {
         <motion.ul
           layout
           style={{
-            flexDirection: isInView ? "column" : "row",
+            flexDirection: !shouldFloat ? "column" : "row",
           }}
         >
           {links.map((link) => (
@@ -48,10 +51,14 @@ export const LinksSpa = ({ links = NAV_LINKS }: LinkSpaProp) => {
               key={link.href}
               layoutId={`nav-link-${link.href}`}
               whileHover={{
-                scale: isInView ? 1.2 : 1,
+                scale: !shouldFloat ? 1.1 : 1,
                 y: -4,
-                boxShadow: isInView ? "0px 2px 10px 1px #f5f5f5af" : "none",
+                boxShadow: !shouldFloat ? "0px 2px 10px 1px #f5f5f5af" : "none",
                 backgroundColor: "#e1b12c",
+              }}
+              whileTap={{
+                scale: 0.9,
+                backgroundColor: "#c09624",
               }}
             >
               <a

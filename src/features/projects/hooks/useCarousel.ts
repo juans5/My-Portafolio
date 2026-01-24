@@ -34,9 +34,9 @@ export const useCarousel = (cardLength: number) => {
   const handleDragEnd = () => {
     const x = dragX.get();
 
-    if (x <= -50 && triggerTranslate < maxIndex) {
+    if (x <= -15 && triggerTranslate < maxIndex) {
       setTriggerTranslate((prev) => prev + 1);
-    } else if (x >= 50 && triggerTranslate > 0) {
+    } else if (x >= 15 && triggerTranslate > 0) {
       setTriggerTranslate((prev) => prev - 1);
     }
     dragX.set(0);

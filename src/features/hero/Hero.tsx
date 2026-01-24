@@ -18,13 +18,19 @@ export const HeroSection = () => {
   const [{ href }] = constants.NAV_LINKS; // primer href del array
 
   return (
-    <section
+    <header
       id={href.replace("#", "")}
       className={styles.container}
       style={{ position: "relative", overflow: "hidden" }}
     >
       {/* Capa de Fondo, se mueve poco y en direccion opuesta (strength negativo) */}
-      <components.ParallaxLayer x={x} y={y} strength={-80} zIndex={1} className={styles.backgroundLayer}>
+      <components.ParallaxLayer
+        x={x}
+        y={y}
+        strength={-80}
+        zIndex={1}
+        className={styles.backgroundLayer}
+      >
         <BackgroundPattern />
       </components.ParallaxLayer>
       {/* Capa Principal - Movimiento Moderado */}
@@ -45,6 +51,6 @@ export const HeroSection = () => {
         </components.AnimateIn>
         <LinksSpa />
       </div>
-    </section>
+    </header>
   );
 };

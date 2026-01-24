@@ -36,16 +36,13 @@ export const AboutDescription = ({ className }: { className: string }) => {
       viewport={{ amount: 0.5 }}
     >
       <h2> FullStack Developer | UI/UX Appassionate | Desire for Learning </h2>
-
-      {paragraph.split(" ").map((char, index) => (
-        <motion.span
-          key={index}
-          style={{ display: "inline-block", marginRight: "0.25em" }}
-          variants={childVariants}
-        >
-          {char}
-        </motion.span>
-      ))}
+      <p>
+        {paragraph.split(" ").map((char, index) => (
+          <motion.span key={index} style={{ display: "inline-block", marginRight: "0.25em" }} variants={childVariants}>
+            {char}
+          </motion.span>
+        ))}
+      </p>
     </motion.div>
   );
 };

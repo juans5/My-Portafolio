@@ -1,8 +1,7 @@
-import "./App.css";
 import { Suspense, lazy } from "react";
 import "./App.css";
-// import { AboutMe } from "./features/about/About";
 import { HeroSection } from "./features/hero/Hero";
+// import { AboutMe } from "./features/about/About";
 // import { ContactMe } from "./features/contact/Contact";
 // import { ProjectSection } from "./features/projects/ProjectSection";
 
@@ -22,14 +21,16 @@ const ContactMe = lazy(() =>
 
 function App() {
   return (
-    <main>
+    <>
       <HeroSection />
       <Suspense fallback={<div style={{ minHeight: "100vh" }} />}>
-        <ProjectSection />
-        <AboutMe />
+        <main>
+          <ProjectSection />
+          <AboutMe />
+        </main>
         <ContactMe />
       </Suspense>
-    </main>
+    </>
   );
 }
 

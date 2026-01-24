@@ -83,7 +83,7 @@
     min-width: 900px;
     height: auto;
   }
-  .description_container {
+  .description_container p {
     font-size: 1.2rem;
     line-height: 1.4;
   }
@@ -107,8 +107,8 @@
     padding: 1.5rem;
   }
 
-  .description_container {
-    font-size: 0.7rem;
+  .description_container p {
+    font-size: 0.8rem;
     line-height: 1.8;
   }
 

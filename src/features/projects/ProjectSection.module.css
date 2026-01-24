@@ -86,15 +86,13 @@
     transform 0.1s;
 }
 
-.card_container button:active,
-.card_container a:active {
-  cursor: pointer;
-  transform: scale(0.95);
+.card_container :where(button, a):hover {
+  background-color: #cb9c1ce2;
 }
 
-.card_container button:hover,
-.card_container a:hover {
-  background-color: #cb9c1ce2;
+.card_container :where(button, a):active {
+  cursor: pointer;
+  transform: scale(0.95);
 }
 
 .card {
