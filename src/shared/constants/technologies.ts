@@ -1,0 +1,32 @@
+import {
+  SiReact,
+  SiJavascript,
+  SiTailwindcss,
+  SiSupabase,
+  SiMysql,
+  SiFramer,
+  SiNextdotjs,
+  SiMongodb,
+  SiNodedotjs,
+  SiExpress,
+  SiDrizzle,
+  SiCss3,
+  SiHtml5,
+} from "react-icons/si";
+
+export const TECHNOLOGIES = [
+  { id: 1, label: "Javascript", category: "1", icon: SiJavascript },
+  { id: 2, label: "React", category: "2", icon: SiReact },
+  { id: 3, label: "Tailwind", category: "2", icon: SiTailwindcss },
+  { id: 4, label: "Nextjs", category: "2", icon: SiNextdotjs },
+  { id: 5, label: "MySql", category: "3", icon: SiMysql },
+  { id: 6, label: "MongoDB", category: "3", icon: SiMongodb },
+  { id: 7, label: "Supabase", category: "3", icon: SiSupabase },
+  { id: 8, label: "FramerMotion", category: "2", icon: SiFramer },
+  // { id: 9, label: "Zustand", category: "2", icon: "./svg/zustand.svg" },
+  { id: 10, label: "Nodejs", category: "1", icon: SiNodedotjs },
+  { id: 11, label: "Express", category: "1", icon: SiExpress },
+  { id: 12, label: "Drizzle", category: "2", icon: SiDrizzle },
+  { id: 13, label: "Css", category: "1", icon: SiCss3 },
+  { id: 14, label: "Html", category: "1", icon: SiHtml5 },
+];

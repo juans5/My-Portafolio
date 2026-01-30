@@ -1,7 +1,6 @@
 import styles from "../ProjectSection.module.css";
 import { motion } from "framer-motion";
-import { technologies } from "../data";
-
+import { TECHNOLOGIES } from "@/shared/constants";
 interface HandleDropUpCard {
   stateDropUp: boolean;
   handleDropUp: React.Dispatch<React.SetStateAction<boolean>>;
@@ -19,7 +18,7 @@ export const DropUpCard = ({ stateDropUp, handleDropUp, tecnology }: HandleDropU
       <h1> Stack</h1>
       <ul>
         {tecnology.map((techId) => {
-          const tech = technologies.find((t) => t.id === techId);
+          const tech = TECHNOLOGIES.find((t) => t.id === techId);
           if (!tech) return null;
           const { label, icon: Icon } = tech;
           return (

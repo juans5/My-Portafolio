@@ -3,17 +3,10 @@ import { components, hooks, constants } from "@/shared/index";
 import styles from "./Hero.module.css";
 
 export const HeroSection = () => {
-  // Llamar hook para los motionValues
-
   const { x, y } = hooks.useMouseParallax({
     stiffness: 100, // como de rapido sigue el mouse
     damping: 50, // rebote que tiene
   });
-
-  const EXTERNAL_LINKS = [
-    { href: "https://github.com/juans5", label: "Github" },
-    { href: "/cv/myCV.pdf", label: "CV" },
-  ];
 
   const [{ href }] = constants.NAV_LINKS; // primer href del array
 
@@ -47,7 +40,7 @@ export const HeroSection = () => {
 
       <div className={styles.hero_container}>
         <components.AnimateIn>
-          <Profile links={EXTERNAL_LINKS} />
+          <Profile links={constants.EXTERNAL_LINKS} />
         </components.AnimateIn>
         <LinksSpa />
       </div>

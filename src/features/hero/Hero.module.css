@@ -117,9 +117,9 @@
 .links_spa li {
   width: 100%;
   list-style-type: none;
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
   border-radius: 2rem;
-  padding: 0.5rem 0;
+  padding: 0;
   text-align: center;
   background-color: #e1b12c;
   box-shadow: 0 0 10px 5px #08415c74;
@@ -127,10 +127,12 @@
 }
 
 .links_spa a {
+  display: inline-block;
+  line-height: 1;
   text-decoration: none;
   color: #02182b;
   font-weight: bold;
-  padding: 0.5rem 1rem;
+  padding: 12px 20px;
   border-radius: 2rem;
 }
 .floating_spa {
@@ -173,11 +175,11 @@
   display: inline-block;
   text-decoration: none;
   margin-right: 2rem;
-  padding: 1rem 1.5rem;
+  padding: 18px;
   border: 2px solid #08415c;
   background-color: #041625c8;
   color: #f5f5f5;
-  border-radius: 2rem;
+  border-radius: 50%;
   font-weight: 600;
   transition:
     transform 0.25s ease-in-out,
@@ -194,6 +196,12 @@
 
 .links_external a:active {
   transform: scale(0.9);
+}
+
+.links_external svg {
+  font-size: 34px;
+  vertical-align: middle;
+  line-height: 1;
 }
 
 @media (width > 748px) and (width <= 1058px) {
@@ -220,16 +228,8 @@
     padding: 2rem 1.5rem;
   }
 
-  .links_spa li {
-    display: inline-block;
-  }
-
-  /* .links_spa li:hover {
-    box-shadow: none;
-  } */
-
   .links_external {
-    font-size: 1.4rem;
+    font-size: 22px;
   }
 }
 
@@ -254,26 +254,17 @@
     position: fixed;
     bottom: -20%;
     height: 5%;
-    padding: 1.2rem;
+    padding: 26px 16px;
   }
 
   .links_spa ul {
-    gap: 1.2rem;
-  }
-
-  .links_spa li {
-    display: inline-block;
-    padding: 0.4rem 0.2rem;
+    gap: 18px;
   }
 
   .links_spa a {
-    padding: 0.4rem;
-    font-size: 0.8rem;
+    padding: 12px;
+    font-size: 12px;
   }
-
-  /* .links_spa li:hover {
-    box-shadow: none;
-  } */
 
   .links_external {
     font-size: 1.5rem;
@@ -307,26 +298,34 @@
     position: fixed;
     bottom: -20%;
     height: 5%;
-    padding: 1rem;
+    padding: 20px 8px;
   }
 
   .links_spa ul {
-    gap: 0.7rem;
+    gap: 10px;
   }
 
   .links_spa a {
     display: inline-block;
-    padding: 0.4rem 0.2rem;
-    font-size: 0.6rem;
+    padding: 8px;
+    font-size: 10px;
     line-height: 1;
   }
-
+  /* 
   .links_spa li {
-    display: inline-block;
-    padding: 0.2rem;
-  }
+    padding: 4px;
+  } */
+
   .links_external {
-    font-size: 1.4rem;
+    font-size: 22px;
     padding: 0;
+  }
+
+  .links_external a {
+    margin-right: 1rem;
+  }
+
+  .links_external svg {
+    font-size: 24px;
   }
 }

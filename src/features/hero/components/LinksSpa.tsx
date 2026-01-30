@@ -3,13 +3,13 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { hooks, constants } from "@/shared";
 
-interface LinkSpa {
+interface NavLink {
   href: string;
   label: string;
 }
 
 interface LinkSpaProp {
-  links?: LinkSpa[];
+  links?: NavLink[];
 }
 
 export const LinksSpa = ({ links = constants.NAV_LINKS }: LinkSpaProp) => {

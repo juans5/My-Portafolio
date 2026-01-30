@@ -1,9 +1,4 @@
-interface LinkSpa {
-  href: string;
-  label: string;
-}
-
-export const NAV_LINKS: LinkSpa[] = [
+export const NAV_LINKS = [
   { href: "#home", label: "Inicio" },
   { href: "#projects", label: "Proyectos" },
   { href: "#about", label: "Conoceme" },

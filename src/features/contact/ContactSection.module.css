@@ -1,9 +1,171 @@
-.contact_container {
+.container {
   width: 100%;
-  height: 50vh;
+  height: 90vh;
+  display: grid;
+  justify-items: center;
+  grid-template-rows: auto 1fr;
+  gap: 2rem;
+  padding: 20px 12px;
+  background-color: #02182ba2;
+}
+
+/* CALL TO ACTION (CTA) STYLES */
+
+.cta_container {
+  width: 80%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 5rem;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 20px;
+  border-radius: 1rem;
+  border: 2px solid #bfc2c7;
+}
+
+.cta_container:hover a {
+  color: #000;
+}
+
+.cta_container h1 {
+  font-size: 28px;
+}
+
+.cta_container a {
+  display: inline-block;
+  padding: 4rem 0;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* INFO CONTAINER STYLES */
+
+.info_container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+/* INDIVUAL STYLES FOR INFO-CONTACT AND INFO-ABOUTME */
+
+.contact,
+.aboutme {
+  width: 100%;
+}
+
+.contact h2,
+.aboutme h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 1rem;
+}
+
+/* CONTACT STYLES  */
+
+.contact address {
+  padding: 1rem;
+  font-style: normal;
+  text-align: center;
+  color: #bfc2c7;
+  height: 100px;
+}
+
+.contact address p:first-child {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact address p:last-child {
+  font-size: 22px;
+}
+
+/* ABOUTME STYLES  */
+
+.aboutme div {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 100px;
+}
+
+.aboutme a {
+  padding: 18px;
+  display: flex;
+  border: 2px solid #08415c;
+  border-radius: 50%;
+  transition:
+    background-color 0.25s ease-in-out,
+    transform 0.2s ease-in-out;
+  transform: scale(1);
+  color: #bfc2c7;
+}
+
+.aboutme a:hover,
+.aboutme a:active {
+  transform: scale(0.95);
+  background-color: #e1b12c;
+  color: #000;
+}
+
+.aboutme svg {
+  font-size: 24px;
+}
+
+/* MEDIA QUERIES */
+
+@media (width > 1058px) {
+  .container {
+    height: 70vh;
+  }
+
+  .cta_container {
+    width: 50%;
+  }
+  .cta_container h1 {
+    font-size: 40px;
+  }
+
+  .contact h2,
+  .aboutme h2 {
+    font-size: 2rem;
+  }
+
+  .contact address p:first-child,
+  .contact address p:last-child {
+    font-size: 22px;
+  }
+
+  .info_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 750px) and (width <= 1058px) {
+  .cta_container {
+    width: 50%;
+  }
+
+  .cta_container h1 {
+    font-size: 35px;
+  }
+
+  .contact h2,
+  .aboutme h2 {
+    font-size: 30px;
+  }
+
+  .contact address p:first-child,
+  .contact address p:last-child {
+    font-size: 20px;
+  }
+}
+
+@media (width >= 450px) and (width < 750px) {
+  .cta_container {
+    width: 60%;
+  }
 }

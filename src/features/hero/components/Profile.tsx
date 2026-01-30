@@ -1,12 +1,8 @@
 import styles from "../Hero.module.css";
-
-interface ExternalLinks {
-  href: string;
-  label: string;
-}
+import { type NavLink } from "@/shared/types";
 
 interface ExternalLinksProps {
-  links: ExternalLinks[];
+  links: NavLink[];
 }
 
 export const Profile = ({ links }: ExternalLinksProps) => {
@@ -14,15 +10,23 @@ export const Profile = ({ links }: ExternalLinksProps) => {
     <div className={styles.profile}>
       <h3> Hola!👋 Soy Juan Simón </h3>
       <h1>
-        <span>Desarrollador Web FullStack,</span> apasionado por aplicar nuevas practicas de hacer
-        mejor los mismos resultados.
+        <span>Desarrollador Web FullStack.</span> Enfoque en interfaces modernas y UX.
       </h1>
       <div className={styles.links_external} aria-label="Enlaces a sitios externos">
-        {links.map((link) => (
-          <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer">
-            {link.label}
-          </a>
-        ))}
+        {links.map((link) => {
+          const Icon = link.icon;
+          return (
+            <a
+              key={link.href}
+              href={link.href}
+              aria-label={link.label}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon />
+            </a>
+          );
+        })}
       </div>
     </div>
   );

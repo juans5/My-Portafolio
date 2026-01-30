@@ -1,1 +1,1 @@
-export { cardContent, technologies } from "./cardsData";
+export { cardContent } from "./cardsData";
