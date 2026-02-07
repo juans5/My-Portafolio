@@ -159,17 +159,16 @@
   cursor: pointer;
   scale: 1;
   transform: translateY(0);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .card_dropup li:hover {
-  background-color: #fff;
+  background-color: #463f3f;
   scale: 1.1;
   transform: translateY(-10px);
 }
 .card_dropup svg {
-  color: #0a77d6;
-  /* color: #bfc2c7; */
+  color: #bfc2c7;
   border-radius: 1rem;
   width: 3rem;
   height: 3rem;

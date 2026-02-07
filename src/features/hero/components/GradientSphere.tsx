@@ -4,17 +4,17 @@ export const GradientSphere = () => {
   return (
     <motion.div
       style={{
-        width: 300,
-        height: 300,
+        width: 350,
+        height: 350,
         borderRadius: "50%",
         background: "radial-gradient(circle at center, #02182b 0%, #08415c 50%, #001323 100%)",
         filter: "blur(80px)", // Un toque estético opcional
       }}
       animate={{
-        scale: [1, 1.2, 0.8], // Efecto de "respiración"
+        scale: [1, 1.3, 0.9], // Efecto de "respiración"
         rotate: [25, 45, 90], // Rotación sutil
         x: [0, 30, -30, 10], // Movimiento errático suave en X
-        y: [-10, -40, 20, -30], // Movimiento errático suave en Y
+        y: [0, -50, -20, 20], // Movimiento errático suave en Y
       }}
       transition={{
         duration: 8, // Que sea muy lento (8 segundos)
