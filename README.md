@@ -150,7 +150,7 @@ The project uses Vite with the following optimizations:
 
 ## 🔄 Roadmap
 
-- [ ] Contact section
+- [X] Contact section
 - [ ] Dark/Light mode
 - [ ] Convert images for performance
 - [ ] Multi-language support
